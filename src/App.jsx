@@ -6,6 +6,38 @@ import styles from "./App.module.css";
 
 import "./global.css";
 
+const posts = [
+    {
+        id: 1,
+        author: {
+            url: 'https://github.com/arthur-david.png',
+            name: 'Arthur Rodrigues',
+            role: 'Software Engineer @ Somapay'
+        },
+        content: [
+            {type: 'paragraph', content: 'Fala galeraa 👋'},
+            {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+            {type: 'link', content: '<a href="">jane.design/doctorcare</a>'},
+        ],
+        publishedAt: new Date('2024-10-14 18:00:00'),
+    },
+    {
+        id: 2,
+        author: {
+            url: 'https://github.com/diego3g.png',
+            name: 'Diego Fernandes',
+            role: 'CTO @ Rocketseat'
+        },
+        content: [
+            {type: 'paragraph', content: 'Fala galeraa 👋'},
+            {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+
+            {type: 'link', content: '<a href="">jane.design/doctorcare</a>'},
+        ],
+        publishedAt: new Date('2024-10-14 17:00:00'),
+    }
+]
+
 export function App() {
     return (
         <div>
@@ -15,15 +47,16 @@ export function App() {
                 <Sidebar />
 
                 <main>
-                    <Post
-                        author="Lorem"
-                        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, ratione perspiciatis distinctio porro neque ex quisquam nostrum dignissimos quae, vero maxime aspernatur asperiores consequatur aliquam totam ab reprehenderit error nobis."
-                    />
-
-                    <Post
-                        author={"Mussum"}
-                        content="Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota uma pinga aí cumpadi! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Detraxit consequat et quo num tendi nada. Viva Forevis aptent taciti sociosqu ad litora torquent."
-                    />
+                    {posts.map(post => {
+                        return (
+                            <Post
+                                key={post.id}
+                                author={post.author}
+                                content={post.content}
+                                publishedAt={post.publishedAt}
+                            />
+                        )
+                    })}
                 </main>
             </div>
         </div>
