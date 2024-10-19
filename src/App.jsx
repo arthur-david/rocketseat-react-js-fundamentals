@@ -12,29 +12,29 @@ const posts = [
         author: {
             url: 'https://github.com/arthur-david.png',
             name: 'Arthur Rodrigues',
-            role: 'Software Engineer @ Somapay'
+            role: 'Software Engineer @Somapay'
         },
         content: [
             {type: 'paragraph', content: 'Fala galeraa 👋'},
             {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-            {type: 'link', content: '<a href="">jane.design/doctorcare</a>'},
+            {type: 'link', content: 'jane.design/doctorcare'},
         ],
-        publishedAt: new Date('2024-10-14 18:00:00'),
+        publishedAt: new Date('2024-10-14 18:43:16'),
     },
     {
         id: 2,
         author: {
             url: 'https://github.com/diego3g.png',
             name: 'Diego Fernandes',
-            role: 'CTO @ Rocketseat'
+            role: 'CTO @Rocketseat'
         },
         content: [
             {type: 'paragraph', content: 'Fala galeraa 👋'},
             {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
 
-            {type: 'link', content: '<a href="">jane.design/doctorcare</a>'},
+            {type: 'link', content: 'jane.design/doctorcare'},
         ],
-        publishedAt: new Date('2024-10-14 17:00:00'),
+        publishedAt: new Date('2024-10-06 12:46:23'),
     }
 ]
 
